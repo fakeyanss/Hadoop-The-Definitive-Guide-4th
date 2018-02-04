@@ -1,5 +1,6 @@
 cd Hadoop-The-Definitive-Guide-4th &&\
 git checkout master &&\
+gitbook init &&\
 gitbook build &&\
 git add . &&\
 git commit -m 'update gitbook' &&\
