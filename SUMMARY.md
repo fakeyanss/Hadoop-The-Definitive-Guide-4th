@@ -26,4 +26,5 @@
             * [Running a Distributed MapReduce Job](part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.md)
         * [Hadoop Streaming](part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.md)
             * [Ruby](part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.md)
+            * [Python](part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.md)
 
