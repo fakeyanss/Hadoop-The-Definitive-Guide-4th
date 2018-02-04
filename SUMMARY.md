@@ -8,9 +8,9 @@
         * [Querying All Your Data](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/querying-all-your-data.md)
         * [Beyond Batch](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/beyond-batch.md)
         * [Comparison](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/Comparison.md)
-            * [Relational Database Management Systems](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data/relational-database-management-systems.md)
-            * [Grid Computing](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data/grid-computing.md)
-            * [Volunteer Computing](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data/volunteer-computing.md)
+            * [Relational Database Management Systems](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/Comparison/relational-database-management-systems.md)
+            * [Grid Computing](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/Comparison/grid-computing.md)
+            * [Volunteer Computing](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/Comparison/volunteer-computing.md)
         * [A Brief History of Apache Hadoop](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md)
         * [What's in This Book](part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md)
 
