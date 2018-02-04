@@ -10,4 +10,3 @@ mv _book/* ./ &&\
 git add . &&\
 git commit -m 'update gitbook' &&\
 git push origin gh-pages
-
