@@ -1,3 +1,4 @@
+cd Hadoop-The-Definitive-Guide-4th &&\
 git checkout master &&\
 gitbook build &&\
 git add . &&\
