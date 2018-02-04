@@ -4,7 +4,9 @@ git add . &&\
 git commit -m 'update gitbook' &&\
 git push origin master &&\
 git checkout gh-pages &&\
-rm rf * &&\
+git rm --cached -r . &&\
+git clean -df &&\
+rm -rf *~ &&\
 git checkout master -- _book &&\
 mv _book/* ./ &&\
 rm -rf _book &&\
