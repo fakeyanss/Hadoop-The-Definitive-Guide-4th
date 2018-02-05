@@ -12,6 +12,6 @@ mv _book/* ./ &&\
 rm -rf _book &&\
 rm -rf publish.sh &&\
 git add . &&\
-git commit -m 'update gitbook' &&\
+git commit -m 'publish gh-pages' &&\
 git push origin gh-pages &&\
 git checkout master
