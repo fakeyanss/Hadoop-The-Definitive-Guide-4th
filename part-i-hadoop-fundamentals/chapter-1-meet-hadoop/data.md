@@ -32,5 +32,5 @@ The good news is that big data is here. The bad news is that we are struggling t
 
 [^2]: All figures are from 2013 or 2014. For more information, see Tom Groenfeldt, **“At NYSE, The Data Deluge Overwhelms Traditional Databases”**; Rich Miller, **“Facebook Builds Exabyte Data Centers for Cold Stor‐ age”**; Ancestry.com’s _“Company Facts”**; Archive.org’s **“Petabox”**; and the **Worldwide LHC Computing Grid project’s welcome page\*_.
 
-[^3]: The quote引用 is from Anand Rajaraman’s blog post **“More data usually beats better algorithms,”** in which he writes about the Netflix Challenge. Alon Halevy, Peter Norvig, and Fernando Pereira make the same point in **“The Unreasonable Effectiveness of Data,”** IEEE Intelligent Systems, March/April 2009.
+[^3]: The quote引用 is from Anand Rajaraman’s blog post **“More data usually beats better algorithms,”** in which he writes about the Netflix Challenge. Alon Halevy, Peter Norvig, and Fernando Pereira make the same point in **“The Unreasonable不合理的 Effectiveness of Data,”** IEEE Intelligent Systems, March/April 2009.
 
