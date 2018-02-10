@@ -10,7 +10,7 @@ This flood of data is coming from many sources. Consider the following:[^2]
 * The Internet Archive互联网档案馆 stores around 18.5 petabytes of data.
 * The Large Hadron Collider大型强子对撞机 near Geneva日内瓦, Switzerland瑞士, produces about 30 petabytes of data per year.
 
-So there’s a lot of data out there. But you are probably wondering how it affects you. Most of the data is locked up in the largest web properties \(like search engines\) or in scientific or financial institutions, isn’t it? Does the advent出现 of big data affect smaller organizations or individuals?大数据的出现给小型组织或个体带来影响了吗
+So there’s a lot of data out there. But you are probably wondering how it affects you. Most of the data is locked up in the largest web properties \(like search engines\) or in scientific or financial institutions, isn’t it? Does the advent出现 of big data affect smaller organizations or individuals个体?
 
 I argue that it does. Take photos, for example. My wife’s grandfather was an avid pho‐ tographer and took photographs throughout his adult life. His entire corpus of mediumformat, slide, and 35mm film, when scanned in at high resolution, occupies around 10 gigabytes. Compare this to the digital photos my family took in 2008, which take up about 5 gigabytes of space. My family is producing photographic data at 35 times the rate my wife’s grandfather’s did, and the rate is increasing every year as it becomes easier to take more and more photos.
 
