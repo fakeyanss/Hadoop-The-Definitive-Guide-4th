@@ -28,7 +28,7 @@ It has been said that “more data usually beats better algorithms嘻,” which 
 
 The good news is that big data is here. The bad news is that we are struggling to store and analyze it.
 
-[^1]: These statistics were reported in a study entitled **"The Digital Universe of Opportunities: Rich Data and the Increasing Value of the Internet of Things."**
+[^1]: These statistics统计 were reported in a study entitled **"The Digital Universe of Opportunities: Rich Data and the Increasing Value of the Internet of Things."**
 
 [^2]: All figures are from 2013 or 2014. For more information, see Tom Groenfeldt, **“At NYSE, The Data Deluge Overwhelms Traditional Databases”**; Rich Miller, **“Facebook Builds Exabyte Data Centers for Cold Stor‐ age”**; Ancestry.com’s _“Company Facts”**; Archive.org’s **“Petabox”**; and the **Worldwide LHC Computing Grid project’s welcome page\*_.
 
