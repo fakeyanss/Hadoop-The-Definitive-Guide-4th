@@ -20,7 +20,7 @@ The trend is for every individual’s data footprint足迹 to grow, but perhaps 
 
 The volume of data being made publicly available increases every year, too. Organizations no longer have to merely仅仅 manage their own data; success in the future will be dictated口述的 to a large extent范围 by their ability to extract提取 value from other organizations’ data.
 
-Initiatives举措 such as **Public Data Sets on Amazon Web Services** and **Infochimps.org** exist to foster培养 the “information commons,” where data can be freely \(or for a modest适度的 price\) shared for anyone to download and analyze. Mashups混合 between different information sources make for unexpected and hitherto unimaginable applications.
+Initiatives举措 such as **Public Data Sets on Amazon Web Services** and **Infochimps.org** exist to foster培养 the “information commons,” where data can be freely \(or for a modest适度的 price\) shared for anyone to download and analyze. Mashups混合 between different information sources make for unexpected意外的 and hitherto迄今 unimaginable applications.
 
 Take, for example, the **Astrometry.net project**, which watches the Astrometry group on Flickr for new photos of the night sky. It analyzes each image and identifies which part of the sky it is from, as well as any interesting celestial bodies, such as stars or galaxies. This project shows the kinds of things that are possible when data \(in this case, tagged photographic images\) is made available and used for something \(image analysis\) that was not anticipated by the creator.
 
