@@ -1,3 +1,4 @@
+# 一键提交更新
 cd Hadoop-The-Definitive-Guide-4th &&\
 git checkout master &&\
 gitbook init &&\
