@@ -8,7 +8,7 @@ This flood of data is coming from many sources. Consider the following:[^2]
 * Facebook hosts more than 240 billion photos, growing at 7 petabytes per month.
 * Ancestry.com, the genealogy site, stores around 10 petabytes of data.
 * The Internet Archive互联网档案馆 stores around 18.5 petabytes of data.
-* The Large Hadron Collider near Geneva, Switzerland, produces about 30 petabytes of data per year.
+* The Large Hadron Collider大型强子对撞机 near Geneva日内瓦, Switzerland瑞士, produces about 30 petabytes of data per year.
 
 So there’s a lot of data out there. But you are probably wondering how it affects you. Most of the data is locked up in the largest web properties \(like search engines\) or in scientific or financial institutions, isn’t it? Does the advent of big data affect smaller organizations or individuals?
 
