@@ -1,4 +1,4 @@
-# 地Data!
+# Data!
 
 We live in the data age. It’s not easy to measure测量 the total volume of data stored electronically, but an IDC国际文献资料中心 estimate put the size of the “digital universe” at 4.4 zettabytes泽字节\(ZB\) in 2013 and is forecasting a tenfold growth by 2020 to 44 zettabytes.[^1] A zettabyte is 1021 bytes, or equivalently相等地 one thousand exabytes艾字节\(EB\), one million petabytes拍字节\(PB\), or one billion terabytes太字节\(TB\). That’s more than one disk drive for every person in the world.
 
