@@ -22,7 +22,7 @@ The volume of data being made publicly available increases every year, too. Orga
 
 Initiatives举措 such as **Public Data Sets on Amazon Web Services** and **Infochimps.org** exist to foster培养 the “information commons,” where data can be freely \(or for a modest适度的 price\) shared for anyone to download and analyze. Mashups混合 between different information sources make for unexpected意外的 and hitherto迄今 unimaginable applications.
 
-Take, for example, the **Astrometry.net project**, which watches the Astrometry group on Flickr for new photos of the night sky. It analyzes each image and identifies which part of the sky it is from, as well as any interesting celestial bodies天体, such as stars or galaxies星系. This project shows the kinds of things that are possible when data \(in this case, tagged photographic images\) is made available and used for something \(image analysis\) that was not anticipated by the creator.
+Take, for example, the **Astrometry.net project**, which watches the Astrometry group on Flickr for new photos of the night sky. It analyzes each image and identifies which part of the sky it is from, as well as any interesting celestial bodies天体, such as stars or galaxies星系. This project shows the kinds of things that are possible when data \(in this case, tagged photographic images\) is made available and used for something \(image analysis\) that was not anticipated预料 by the creator.
 
 It has been said that “more data usually beats better algorithms,” which is to say that for some problems \(such as recommending movies or music based on past preferences\), however fiendish your algorithms, often they can be beaten simply by having more data \(and a less sophisticated algorithm\).[^3]
 
