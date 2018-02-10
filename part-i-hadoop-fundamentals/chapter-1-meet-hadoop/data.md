@@ -24,7 +24,7 @@ Initiatives举措 such as **Public Data Sets on Amazon Web Services** and **Info
 
 Take, for example, the **Astrometry.net project**, which watches the Astrometry group on Flickr for new photos of the night sky. It analyzes each image and identifies which part of the sky it is from, as well as any interesting celestial bodies天体, such as stars or galaxies星系. This project shows the kinds of things that are possible when data \(in this case, tagged photographic images\) is made available and used for something \(image analysis\) that was not anticipated预料 by the creator.
 
-It has been said that “more data usually beats better algorithms嘻,” which is to say that for some problems \(such as recommending movies or music based on past preferences\), however fiendish your algorithms, often they can be beaten simply by having more data \(and a less sophisticated algorithm\).[^3]
+It has been said that “more data usually beats better algorithms嘻,” which is to say that for some problems \(such as recommending movies or music based on past preferences\), however fiendish极坏的 your algorithms, often they can be beaten simply by having more data \(and a less sophisticated algorithm\).[^3]
 
 The good news is that big data is here. The bad news is that we are struggling to store and analyze it.
 
