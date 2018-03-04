@@ -1,2 +1,0 @@
-# Relational Database Management Systems
-

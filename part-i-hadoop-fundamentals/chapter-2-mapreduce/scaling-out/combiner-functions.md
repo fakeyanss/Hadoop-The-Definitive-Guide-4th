@@ -1,2 +1,0 @@
-# Combiner Functions
-
