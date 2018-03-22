@@ -6,7 +6,7 @@ However, since its original incarnation化身, Hadoop has evolved进化 beyond b
 
 The first component to provide online access was HBase, a key-value store that uses HDFS for its underlying根本的 storage. HBase provides both online read/write access of individual个体的 rows and batch operations for reading and writing data in bulk大块, making it a good solution for building applications on.
 
-The real enabler促成者 for new processing models in Hadoop was the introduction of YARN \(which stands for Yet Another另一种 Resource Negotiator交涉者\) in Hadoop 2. YARN is a cluster resource management system, which allows any distributed program \(not just MapRe‐ duce\) to run on data in a Hadoop cluster.
+The real enabler促成者 for new processing models in Hadoop was the introduction of YARN \(which stands for Yet Another另一种 Resource Negotiator交涉者\) in Hadoop 2. YARN is a cluster resource management system, which allows any distributed program \(not just MapReduce\) to run on data in a Hadoop cluster.
 
 In the last few years, there has been a flowering of different processing patterns that work with Hadoop. Here is a sample:
 
