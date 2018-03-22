@@ -1,4 +1,4 @@
-# Beyond Batch
+# lBeyond Batch
 
 For all its strengths, MapReduce is fundamentally根本上 a batch processing批处理 system, and is not suitable for interactive analysis. You can’t run a query and get results back in a few seconds or less. Queries typically take minutes or more, so it’s best for offline use, where there isn’t a human sitting in the processing loop waiting for results.
 
