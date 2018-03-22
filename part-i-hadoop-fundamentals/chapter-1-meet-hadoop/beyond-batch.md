@@ -2,7 +2,7 @@
 
 For all its strengths, MapReduce is fundamentally根本上 a batch processing批处理 system, and is not suitable for interactive analysis. You can’t run a query and get results back in a few seconds or less. Queries typically take minutes or more, so it’s best for offline use, where there isn’t a human sitting in the processing loop waiting for results.
 
-However, since its original incarnation化身, Hadoop has evolved进化 beyond batch processing. Indeed确实, the term “Hadoop” is sometimes used to refer to a larger ecosystem生态系统 of projects, not just HDFS and MapReduce, that fall under the umbrella of infrastructure for dis‐ tributed computing and large-scale data processing. Many of these are hosted by the **Apache Software Foundation**, which provides support for a community of open source software projects, including the original HTTP Server from which it gets its name.
+However, since its original incarnation化身, Hadoop has evolved进化 beyond batch processing. Indeed确实, the term “Hadoop” is sometimes used to refer to a larger ecosystem生态系统 of projects, not just HDFS and MapReduce, that fall under the umbrella of infrastructure基础设施 for distributed computing and large-scale data processing. Many of these are hosted by the **Apache Software Foundation**, which provides support for a community of open source software projects, including the original HTTP Server from which it gets its name.
 
 The first component to provide online access was HBase, a key-value store that uses HDFS for its underlying storage. HBase provides both online read/write access of in‐ dividual rows and batch operations for reading and writing data in bulk, making it a good solution for building applications on.
 
