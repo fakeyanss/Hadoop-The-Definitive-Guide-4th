@@ -14,7 +14,7 @@ In the last few years, there has been a flowering of different processing patter
 
   * By dispensing调剂 with MapReduce and using a distributed query engine that uses dedicated专用的 “always on” daemons守护进程 \(like Impala\) or container容器 reuse \(like Hive on Tez\), it’s possible to achieve low-latency低延迟 responses for SQL queries on Hadoop while still scaling up to large dataset sizes. 
 
-* Iterative processing
+* Iterative迭代 processing
 
   * Many algorithms—such as those in machine learning—are iterative in nature, so it’s much more efficient to hold each intermediate working set in memory, com‐ pared to loading from disk on each iteration. The architecture of MapReduce does not allow this, but it’s straightforward with Spark, for example, and it enables a highly exploratory style of working with datasets. 
 
