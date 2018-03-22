@@ -8,7 +8,7 @@ The first component to provide online access was HBase, a key-value store that u
 
 The real enabler促成者 for new processing models in Hadoop was the introduction of YARN \(which stands for Yet Another另一种 Resource Negotiator交涉者\) in Hadoop 2. YARN is a cluster resource management system, which allows any distributed program \(not just MapReduce\) to run on data in a Hadoop cluster.
 
-In the last few years, there has been a flowering of different processing patterns that work with Hadoop. Here is a sample:
+In the last few years, there has been a flowering of different processing patterns模式 that work with Hadoop. Here is a sample:
 
 * Interactive SQL
 
