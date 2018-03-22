@@ -26,5 +26,5 @@ In the last few years, there has been a flowering of different processing patter
 
   * The Solr search platform can run on a Hadoop cluster, indexing documents as they are added to HDFS, and serving search queries from indexes stored in HDFS. 
 
-Despite the emergence of different processing frameworks on Hadoop, MapReduce still has a place for batch processing, and it is useful to understand how it works since it introduces several concepts that apply more generally \(like the idea of input formats, or how a dataset is split into pieces\).
+Despite尽管 the emergence出现 of different processing frameworks on Hadoop, MapReduce still has a place for batch processing, and it is useful to understand how it works since it introduces several concepts that apply more generally \(like the idea of input formats, or how a dataset is split into pieces\).
 
