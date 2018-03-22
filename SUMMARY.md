@@ -93,7 +93,7 @@
             * [JobControl](part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/jobcontrol.md)
             * [Apache Oozie](part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/apache-oozie.md)
 * [Part IV. Related Projects](part-iv-related-projects.md)
-    * [Chapter 19. Spark](part-iv-mapreduce.md/chapter-19-spark.md)
+    * [Chapter 19. Spark](part-iv-related-projects/chapter-19-spark.md)
         * [Installing Spark](part-iv-related-projects/chapter-19-spark/installing-spark.md)
         * [An Example](part-iv-related-projects/chapter-19-spark/an-example.md)
             * [Spark Application, Jobs, Stages, and Tasks](part-iv-related-projects/chapter-19-spark/an-example/spark-application-jobs-stages-and-tasks.md)
