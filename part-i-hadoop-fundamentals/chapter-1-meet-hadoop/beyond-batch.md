@@ -16,7 +16,7 @@ In the last few years, there has been a flowering of different processing patter
 
 * Iterative迭代 processing
 
-  * Many algorithms—such as those in machine learning—are iterative in nature, so it’s much more efficient效率 to hold each intermediate working set in memory, com‐ pared to loading from disk on each iteration. The architecture of MapReduce does not allow this, but it’s straightforward with Spark, for example, and it enables a highly exploratory style of working with datasets. 
+  * Many algorithms—such as those in machine learning—are iterative in nature, so it’s much more efficient效率 to hold each intermediate中间的 working set in memory, compared to loading from disk on each iteration. The architecture of MapReduce does not allow this, but it’s straightforward直接的 with Spark, for example, and it enables a highly exploratory style of working with datasets. 
 
 * Stream processing
 
