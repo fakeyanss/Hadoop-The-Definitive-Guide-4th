@@ -1,0 +1,1929 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>A Scala Standalong Application · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="a-java-example.html" />
+    
+    
+    <link rel="prev" href="spark-application-jobs-stages-and-tasks.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../part-i-hadoop-fundamentals.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals.html">
+            
+                    
+                    Part I. Hadoop Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop.html">
+            
+                    
+                    Chapter 1. Meet Hadoop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data.html">
+            
+                    
+                    Data!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data-storage-and-analysis.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/data-storage-and-analysis.html">
+            
+                    
+                    Data Storage and Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/querying-all-your-data.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/querying-all-your-data.html">
+            
+                    
+                    Querying All Your Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/beyond-batch.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/beyond-batch.html">
+            
+                    
+                    Beyond Batch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems.html">
+            
+                    
+                    Comparison with Other Systems
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.5.1" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/relational-database-management-systems.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/relational-database-management-systems.html">
+            
+                    
+                    Relational Database Management Systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.2" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/grid-computing.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/grid-computing.html">
+            
+                    
+                    Grid Computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5.3" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/volunteer-computing.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/volunteer-computing.html">
+            
+                    
+                    Volunteer Computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.html">
+            
+                    
+                    A Brief History of Apache Hadoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.html">
+            
+                    
+                    What's in This Book
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce.html">
+            
+                    
+                    Chapter 2. MapReduce
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.html">
+            
+                    
+                    A Weather Dataset
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.html">
+            
+                    
+                    Data Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.html">
+            
+                    
+                    Analyzing the Data with Unix Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop.html">
+            
+                    
+                    Analyzing the Data with Hadoop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/map-and-reduce.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/map-and-reduce.html">
+            
+                    
+                    Map and Reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/java-mapreduce.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/java-mapreduce.html">
+            
+                    
+                    Java MapRedece
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out.html">
+            
+                    
+                    Scaling Out
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/data-show.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/data-show.html">
+            
+                    
+                    Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/combiner-functions.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/combiner-functions.html">
+            
+                    
+                    Combiner Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.3" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.html">
+            
+                    
+                    Running a Distributed MapReduce Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.html">
+            
+                    
+                    Hadoop Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" data-path="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem.html">
+            
+                    
+                    Chapter 3. The Hadoop Distributed Filesystem
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-design-of-hdfs.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-design-of-hdfs.html">
+            
+                    
+                    THe Design of HDFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts.html">
+            
+                    
+                    HDFS Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.2.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/blocks.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/blocks.html">
+            
+                    
+                    Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.2" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/namenodes-and-datanodes.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/namenodes-and-datanodes.html">
+            
+                    
+                    Namenodes and Datanodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.3" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/block-caching.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/block-caching.html">
+            
+                    
+                    Block Caching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.4" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/hdfs-federation.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/hdfs-federation.html">
+            
+                    
+                    HDFS Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2.5" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/hdfs-high-availability.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hdfs-concepts/hdfs-high-availability.html">
+            
+                    
+                    HDFS High Availability
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-command-line-inferface.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-command-line-inferface.html">
+            
+                    
+                    The Command-Line Interface
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.3.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-command-line-inferface/basic-filesystem-operation.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-command-line-inferface/basic-filesystem-operation.html">
+            
+                    
+                    Basic FileSystem Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hadoop-filesystems.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hadoop-filesystems.html">
+            
+                    
+                    Hadoop Filesystems
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.4.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hadoop-filesystems/interfaces.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/hadoop-filesystems/interfaces.html">
+            
+                    
+                    Interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface.html">
+            
+                    
+                    The Java Interface
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.5.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/reading-data-from-a-hadoop-url.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/reading-data-from-a-hadoop-url.html">
+            
+                    
+                    Reading Data from a Hadoop URL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.2" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/reading-data-using-the-filesystem-api.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/reading-data-using-the-filesystem-api.html">
+            
+                    
+                    Reading Data Using the FileSystem API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.3" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/writing-data.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/writing-data.html">
+            
+                    
+                    Writing Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.4" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/directories.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/directories.html">
+            
+                    
+                    Directories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.5" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/querying-the-filesystem.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/querying-the-filesystem.html">
+            
+                    
+                    Querying the Filesystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5.6" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/deleting-data.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/the-java-interface/deleting-data.html">
+            
+                    
+                    Deleting Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow.html">
+            
+                    
+                    Data Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.6.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow/Anatomy-of-a-file-read.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow/Anatomy-of-a-file-read.html">
+            
+                    
+                    Anatomy of a File Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6.2" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow/anatomy-of-a-file-write.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow/anatomy-of-a-file-write.html">
+            
+                    
+                    Anatomy of a File Writw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6.3" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow/coherency-model.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/data-flow/coherency-model.html">
+            
+                    
+                    Coherency Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/parallel-copying-with-distcp.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/parallel-copying-with-distcp.html">
+            
+                    
+                    Parallel Copying with distcp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.7.1" data-path="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/parallel-copying-with-distcp/keeping-an-hdfs-cluster-balanced.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-3-the-hadoop-distributed-filesystem/parallel-copying-with-distcp/keeping-an-hdfs-cluster-balanced.html">
+            
+                    
+                    Keeping an HDFS Cluster Balanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn.html">
+            
+                    
+                    Chapter 4. YARN
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run.html">
+            
+                    
+                    Anatomy of a YARN Application Run
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1.1" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run/resourve-requests.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run/resourve-requests.html">
+            
+                    
+                    Resource Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.2" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run/application-lifespan.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run/application-lifespan.html">
+            
+                    
+                    Application Lifespan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.1.3" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run/building-yarn-application.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/anatomy-of-a-yarn-application-run/building-yarn-application.html">
+            
+                    
+                    Building YARN Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn.html">
+            
+                    
+                    Scheduling in YARN
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.2.1" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/scheduler-options.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/scheduler-options.html">
+            
+                    
+                    Scheduler Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.2" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/capacity-scheduler-configuratuon.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/capacity-scheduler-configuratuon.html">
+            
+                    
+                    Capacity Scheduler Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.3" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/fair-scheduler-configuration.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/fair-scheduler-configuration.html">
+            
+                    
+                    Fair Schedular Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.4" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/delay-scheduling.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/delay-scheduling.html">
+            
+                    
+                    Delay Scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2.5" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/dominant-resource-fairness.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/scheduling-in-yarn/dominant-resource-fairness.html">
+            
+                    
+                    Dominant Resource Fairness
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../../part-i-hadoop-fundamentals/chapter-4-yarn/futher-reading.html">
+            
+                <a href="../../../part-i-hadoop-fundamentals/chapter-4-yarn/futher-reading.html">
+            
+                    
+                    Futher Reading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../part-ii-mapreduce.html">
+            
+                <a href="../../../part-ii-mapreduce.html">
+            
+                    
+                    Part II. MapReduce
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application.html">
+            
+                    
+                    Chapter 6. Developing a MapReduce Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/the-configuration-api.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/the-configuration-api.html">
+            
+                    
+                    The Configuration API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/the-configuration-api/combining-resources.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/the-configuration-api/combining-resources.html">
+            
+                    
+                    Combining Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/the-configuration-api/variable-expansion.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/the-configuration-api/variable-expansion.html">
+            
+                    
+                    variable Expansion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/setting-up-the-development-environment.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/setting-up-the-development-environment.html">
+            
+                    
+                    Setting Up the Development Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/setting-up-the-development-environment/managing-configuration.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/setting-up-the-development-environment/managing-configuration.html">
+            
+                    
+                    Managing Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/setting-up-the-development-environment/geneticoptionsparser-tool-and-ToolRunner.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/setting-up-the-development-environment/geneticoptionsparser-tool-and-ToolRunner.html">
+            
+                    
+                    GenericOptionsParser, Tool, and ToolRunner
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/writing-a-unit-test-with-mrunit.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/writing-a-unit-test-with-mrunit.html">
+            
+                    
+                    Writing a Unit Test with MRUnit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.3.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/writing-a-unit-test-with-mrunit/mapper.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/writing-a-unit-test-with-mrunit/mapper.html">
+            
+                    
+                    Mapper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/writing-a-unit-test-with-mrunit/reducer.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/writing-a-unit-test-with-mrunit/reducer.html">
+            
+                    
+                    Reducer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-locally-on-test-data.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-locally-on-test-data.html">
+            
+                    
+                    Running Locally on Test Data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.4.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-a-job-in-a-local-job-runner.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-a-job-in-a-local-job-runner.html">
+            
+                    
+                    Running a Job in a Local Job Runner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/testing-the-driver.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/testing-the-driver.html">
+            
+                    
+                    Testing the Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster.html">
+            
+                    
+                    Running on a Cluster
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.5.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/packing-a-job.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/packing-a-job.html">
+            
+                    
+                    Packing a Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/luanching-a-job.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/luanching-a-job.html">
+            
+                    
+                    Luanching a Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5.3" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/the-mapreduce-web-ui.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/the-mapreduce-web-ui.html">
+            
+                    
+                    The MapReduce Web UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5.4" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/retrieving the results.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/retrieving the results.html">
+            
+                    
+                    retrieving the Results
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5.5" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/debugging-a-job.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/debugging-a-job.html">
+            
+                    
+                    Debugging a Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5.6" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/hadoop-logs.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/hadoop-logs.html">
+            
+                    
+                    hadoop Logs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5.7" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/remote-debugging.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/running-on-a-cluster/remote-debugging.html">
+            
+                    
+                    Remote Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/tuning-a-job.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/tuning-a-job.html">
+            
+                    
+                    Tuning a Job
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.6.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/tuning-a-job/profiling-tasks.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/tuning-a-job/profiling-tasks.html">
+            
+                    
+                    Profiling Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows.html">
+            
+                    
+                    MapReduce Workflows
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.7.1" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/decomposing-a-problem-into-mapreduce-jobs.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/decomposing-a-problem-into-mapreduce-jobs.html">
+            
+                    
+                    Decomposing a Problem into MapReduce Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7.2" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/jobcontrol.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/jobcontrol.html">
+            
+                    
+                    JobControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7.3" data-path="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/apache-oozie.html">
+            
+                <a href="../../../part-ii-mapreduce/chapter-6-developing-a-mapreduce-application/mapduce-workflows/apache-oozie.html">
+            
+                    
+                    Apache Oozie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../part-iv-related-projects.html">
+            
+                <a href="../../../part-iv-related-projects.html">
+            
+                    
+                    Part IV. Related Projects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../part-iv-mapreduce.md/chapter-19-spark.html">
+            
+                <a href="../../../part-iv-mapreduce.md/chapter-19-spark.html">
+            
+                    
+                    Chapter 19. Spark
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../installing-spark.html">
+            
+                <a href="../installing-spark.html">
+            
+                    
+                    Installing Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../an-example.html">
+            
+                <a href="../an-example.html">
+            
+                    
+                    An Example
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="spark-application-jobs-stages-and-tasks.html">
+            
+                <a href="spark-application-jobs-stages-and-tasks.html">
+            
+                    
+                    Spark Application, Jobs, Stages, and Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.2.2" data-path="a-scala-standalone-application.html">
+            
+                <a href="a-scala-standalone-application.html">
+            
+                    
+                    A Scala Standalong Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.3" data-path="a-java-example.html">
+            
+                <a href="a-java-example.html">
+            
+                    
+                    A Java Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.4" data-path="a-python-example.html">
+            
+                <a href="a-python-example.html">
+            
+                    
+                    A Python Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../resilient-distributed-datasets.html">
+            
+                <a href="../resilient-distributed-datasets.html">
+            
+                    
+                    Resilient Distributed Datasets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.3.1" data-path="../resilient-distributed-datasets/creation.html">
+            
+                <a href="../resilient-distributed-datasets/creation.html">
+            
+                    
+                    Creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" data-path="../resilient-distributed-datasets/transformations-and-actions.html">
+            
+                <a href="../resilient-distributed-datasets/transformations-and-actions.html">
+            
+                    
+                    Transformations and Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.3" data-path="../resilient-distributed-datasets/persistence.html">
+            
+                <a href="../resilient-distributed-datasets/persistence.html">
+            
+                    
+                    Persistence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.4" data-path="../resilient-distributed-datasets/serialization.html">
+            
+                <a href="../resilient-distributed-datasets/serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../shared-valiables.html">
+            
+                <a href="../shared-valiables.html">
+            
+                    
+                    Shared Variables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.4.1" data-path="../broadcast-valiables.html">
+            
+                <a href="../broadcast-valiables.html">
+            
+                    
+                    Broadcast Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4.2" data-path="../accumulators.html">
+            
+                <a href="../accumulators.html">
+            
+                    
+                    Accumulators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../anatomy-of-a-spark-job-run.html">
+            
+                <a href="../anatomy-of-a-spark-job-run.html">
+            
+                    
+                    Anatomy of a Spark Job Run
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.5.1" data-path="../anatomy-of-a-spark-job-run/job-submission.html">
+            
+                <a href="../anatomy-of-a-spark-job-run/job-submission.html">
+            
+                    
+                    Job Submission
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5.2" data-path="../anatomy-of-a-spark-job-run/dag-construction.html">
+            
+                <a href="../anatomy-of-a-spark-job-run/dag-construction.html">
+            
+                    
+                    DAG Construction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5.3" data-path="../anatomy-of-a-spark-job-run/task-scheduling.html">
+            
+                <a href="../anatomy-of-a-spark-job-run/task-scheduling.html">
+            
+                    
+                    Task Scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5.4" data-path="../anatomy-of-a-spark-job-run/task-execution.html">
+            
+                <a href="../anatomy-of-a-spark-job-run/task-execution.html">
+            
+                    
+                    Task Execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../execution-and-cluster-managers.html">
+            
+                <a href="../execution-and-cluster-managers.html">
+            
+                    
+                    Execution and Cluster Managers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.6.1" data-path="../execution-and-cluster-managers/spark-on-yarn.html">
+            
+                <a href="../execution-and-cluster-managers/spark-on-yarn.html">
+            
+                    
+                    Spark on YARN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../futher-reading.html">
+            
+                <a href="../futher-reading.html">
+            
+                    
+                    Futher Reading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >A Scala Standalong Application</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="a-scala-standalong-application">A Scala Standalong Application</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="spark-application-jobs-stages-and-tasks.html" class="navigation navigation-prev " aria-label="Previous page: Spark Application, Jobs, Stages, and Tasks">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="a-java-example.html" class="navigation navigation-next " aria-label="Next page: A Java Example">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"A Scala Standalong Application","level":"1.4.1.2.2","depth":4,"next":{"title":"A Java Example","level":"1.4.1.2.3","depth":4,"path":"part-iv-related-projects/chapter-19-spark/an-example/a-java-example.md","ref":"part-iv-related-projects/chapter-19-spark/an-example/a-java-example.md","articles":[]},"previous":{"title":"Spark Application, Jobs, Stages, and Tasks","level":"1.4.1.2.1","depth":4,"path":"part-iv-related-projects/chapter-19-spark/an-example/spark-application-jobs-stages-and-tasks.md","ref":"part-iv-related-projects/chapter-19-spark/an-example/spark-application-jobs-stages-and-tasks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part-iv-related-projects/chapter-19-spark/an-example/a-scala-standalone-application.md","mtime":"2018-03-22T12:23:24.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-22T12:23:26.030Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
