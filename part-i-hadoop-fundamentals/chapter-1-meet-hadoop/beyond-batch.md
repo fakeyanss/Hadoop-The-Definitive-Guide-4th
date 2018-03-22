@@ -20,7 +20,7 @@ In the last few years, there has been a flowering of different processing patter
 
 * Stream processing
 
-  * Streaming systems like Storm, Spark Streaming, or Samza make it possible to run real-time实时的, distributed computations on unbounded streams of data and emit results to Hadoop storage or external systems. 
+  * Streaming systems like Storm, Spark Streaming, or Samza make it possible to run real-time实时的, distributed computations on unbounded无限的 streams of data and emit results to Hadoop storage or external systems. 
 
 * Search
 
