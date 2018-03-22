@@ -12,7 +12,7 @@ In the last few years, there has been a flowering of different processing patter
 
 * Interactive SQL
 
-  * By dispensing with MapReduce and using a distributed query engine that uses dedicated “always on” daemons \(like Impala\) or container reuse \(like Hive on Tez\), it’s possible to achieve low-latency responses for SQL queries on Hadoop while still scaling up to large dataset sizes. 
+  * By dispensing调剂 with MapReduce and using a distributed query engine that uses dedicated “always on” daemons \(like Impala\) or container reuse \(like Hive on Tez\), it’s possible to achieve low-latency responses for SQL queries on Hadoop while still scaling up to large dataset sizes. 
 
 * Iterative processing
 
