@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>What's in This Book · GitBook</title>
+        <title>What's in This Book · Hadoop-The Definitive Guide 4th</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
@@ -34,9 +42,7 @@
 
     
         
-    
-        
-    
+        <link rel="stylesheet" href="../../styles/website.css">
         
     
         
@@ -82,7 +88,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="http://yanss.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -1847,6 +1862,18 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="whats-in-this-book">What&apos;s in This Book</h1>
+<p>The book is divided into five main parts: Parts I to III are about core Hadoop, Part IV covers related projects in the Hadoop ecosystem, and Part V contains Hadoop case studies. You can read the book from cover to cover, but there are alternative pathways through the book that allow you to skip chapters that aren&#x2019;t needed to read later ones. See Figure 1-1.</p>
+<p>Part I is made up of five chapters that cover the fundamental components in Hadoop and should be read before tackling later chapters. Chapter 1 (this chapter) is a high-level introduction to Hadoop. Chapter 2 provides an introduction to MapReduce. Chapter 3 looks at Hadoop filesystems, and in particular HDFS, in depth. Chapter 4 discusses YARN, Hadoop&#x2019;s cluster resource management system. Chapter 5 covers the I/O building blocks in Hadoop: data integrity, compression, serialization, and file-based data structures.</p>
+<p>Part II has four chapters that cover MapReduce in depth. They provide useful understanding for later chapters (such as the data processing chapters in Part IV), but could be skipped on a first reading. Chapter 6 goes through the practical steps needed to develop a MapReduce application. Chapter 7 looks at how MapReduce is implemented in Hadoop, from the point of view of a user. Chapter 8 is about the MapReduce programming model and the various data formats that MapReduce can work with. Chapter 9 is on advanced MapReduce topics, including sorting and joining data.</p>
+<p>Part III concerns the administration of Hadoop: Chapters 10 and 11 describe how to set up and maintain a Hadoop cluster running HDFS and MapReduce on YARN.
+Part IV of the book is dedicated to projects that build on Hadoop or are closely related to it. Each chapter covers one project and is largely independent of the other chapters in this part, so they can be read in any order.</p>
+<p>The first two chapters in this part are about data formats. Chapter 12 looks at Avro, a cross-language data serialization library for Hadoop, and Chapter 13 covers Parquet, an efficient columnar storage format for nested data.</p>
+<p>The next two chapters look at data ingestion, or how to get your data into Hadoop. Chapter 14 is about Flume, for high-volume ingestion of streaming data. Chapter 15 is about Sqoop, for efficient bulk transfer of data between structured data stores (like relational databases) and HDFS.</p>
+<p>The common theme of the next four chapters is data processing, and in particular using higher-level abstractions than MapReduce. Pig (Chapter 16) is a data flow language for exploring very large datasets. Hive (Chapter 17) is a data warehouse for managing data stored in HDFS and provides a query language based on SQL. Crunch (Chapter 18) is a high-level Java API for writing data processing pipelines that can run on MapReduce or Spark. Spark (Chapter 19) is a cluster computing framework for large-scale data processing; it provides a directed acyclic graph (DAG) engine, and APIs in Scala, Java, and Python.</p>
+<p>Chapter 20 is an introduction to HBase, a distributed column-oriented real-time database that uses HDFS for its underlying storage. And Chapter 21 is about ZooKeeper, a distributed, highly available coordination service that provides useful primitives for building distributed applications.</p>
+<p>Finally, Part V is a collection of case studies contributed by people using Hadoop in interesting ways.</p>
+<p>Supplementary information about Hadoop, such as how to install it on your machine, can be found in the appendixes.</p>
+<p><img src="http://ouat6a0as.bkt.clouddn.com/hadoop-figure1-1%20.png" alt="hadoop-figure1-1 "></p>
 
                                 
                                 </section>
@@ -1890,7 +1917,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"What's in This Book","level":"1.2.1.7","depth":3,"next":{"title":"Chapter 2. MapReduce","level":"1.2.2","depth":2,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce.md","articles":[{"title":"A Weather Dataset","level":"1.2.2.1","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","articles":[{"title":"Data Format","level":"1.2.2.1.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","articles":[]}]},{"title":"Analyzing the Data with Unix Tools","level":"1.2.2.2","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","articles":[]},{"title":"Analyzing the Data with Hadoop","level":"1.2.2.3","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop.md","articles":[{"title":"Map and Reduce","level":"1.2.2.3.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/map-and-reduce.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/map-and-reduce.md","articles":[]},{"title":"Java MapRedece","level":"1.2.2.3.2","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/java-mapreduce.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/java-mapreduce.md","articles":[]}]},{"title":"Scaling Out","level":"1.2.2.4","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out.md","articles":[{"title":"Data Flow","level":"1.2.2.4.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/data-show.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/data-show.md","articles":[]},{"title":"Combiner Functions","level":"1.2.2.4.2","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/combiner-functions.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/combiner-functions.md","articles":[]},{"title":"Running a Distributed MapReduce Job","level":"1.2.2.4.3","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.md","articles":[]}]},{"title":"Hadoop Streaming","level":"1.2.2.5","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.md","articles":[{"title":"Ruby","level":"1.2.2.5.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.md","articles":[]},{"title":"Python","level":"1.2.2.5.2","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.md","articles":[]}]}]},"previous":{"title":"A Brief History of Apache Hadoop","level":"1.2.1.6","depth":3,"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md","ref":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md","mtime":"2018-03-23T09:39:11.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-23T09:49:06.118Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"What's in This Book","level":"1.2.1.7","depth":3,"next":{"title":"Chapter 2. MapReduce","level":"1.2.2","depth":2,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce.md","articles":[{"title":"A Weather Dataset","level":"1.2.2.1","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","articles":[{"title":"Data Format","level":"1.2.2.1.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","articles":[]}]},{"title":"Analyzing the Data with Unix Tools","level":"1.2.2.2","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","articles":[]},{"title":"Analyzing the Data with Hadoop","level":"1.2.2.3","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop.md","articles":[{"title":"Map and Reduce","level":"1.2.2.3.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/map-and-reduce.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/map-and-reduce.md","articles":[]},{"title":"Java MapRedece","level":"1.2.2.3.2","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/java-mapreduce.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-hadoop/java-mapreduce.md","articles":[]}]},{"title":"Scaling Out","level":"1.2.2.4","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out.md","articles":[{"title":"Data Flow","level":"1.2.2.4.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/data-show.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/data-show.md","articles":[]},{"title":"Combiner Functions","level":"1.2.2.4.2","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/combiner-functions.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/combiner-functions.md","articles":[]},{"title":"Running a Distributed MapReduce Job","level":"1.2.2.4.3","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/scaling-out/runing-a-distributed-mapreduce-job.md","articles":[]}]},{"title":"Hadoop Streaming","level":"1.2.2.5","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming.md","articles":[{"title":"Ruby","level":"1.2.2.5.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/ruby.md","articles":[]},{"title":"Python","level":"1.2.2.5.2","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/hadoop-streaming/Python.md","articles":[]}]}]},"previous":{"title":"A Brief History of Apache Hadoop","level":"1.2.1.6","depth":3,"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md","ref":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax","github","splitter","toggle-chapters"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"github":{"url":"https://github.com/fakeYanss"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageBreaksBefore":"/","toc":false,"paperSize":"a4","margin":{"right":40,"left":40,"top":36,"bottom":36},"font":"consolas","fontSize":15,"fontFamily":"Arial","chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hadoop-The Definitive Guide 4th","language":"en","links":{"sidebar":{"Home":"http://yanss.top"}},"gitbook":"*","description":"自读+部分单词翻译"},"file":{"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md","mtime":"2018-03-24T13:44:30.412Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T13:44:33.412Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1898,6 +1925,26 @@
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
