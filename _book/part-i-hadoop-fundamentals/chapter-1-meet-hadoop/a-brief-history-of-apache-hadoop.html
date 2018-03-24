@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>A Brief History of Apache Hadoop · GitBook</title>
+        <title>A Brief History of Apache Hadoop · Hadoop-The Definitive Guide 4th</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
@@ -34,9 +42,7 @@
 
     
         
-    
-        
-    
+        <link rel="stylesheet" href="../../styles/website.css">
         
     
         
@@ -82,7 +88,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="http://yanss.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -1849,8 +1864,7 @@
                                 <h1 id="a-brief-history-of-apache-hadoop">A Brief History of Apache Hadoop</h1>
 <p>Hadoop was created by Doug Cutting, the creator of Apache Lucene, the widely used text search library. Hadoop has its origins in Apache Nutch, an open source web search engine, itself a part of the Lucene project.</p>
 <hr>
-<center><h1 id="the-origin-of-the-name-hadoop">The Origin of the Name &#x201C;Hadoop&#x201D;</h1></center>
-
+<h2 id="the-origin-of-the-name-hadoop">The Origin of the Name &quot;Hadoop&quot;</h2>
 <p>The name Hadoop is not an acronym; it&#x2019;s a made-up name. The project&#x2019;s creator, Doug Cutting, explains how the name came about:</p>
 <blockquote>
 <p>The name my kid gave a stuffed yellow elephant. Short, relatively easy to spell and pronounce, meaningless, and not used elsewhere: those are my naming criteria. Kids are good at generating such. Googol is a kid&#x2019;s term.</p>
@@ -1858,9 +1872,54 @@
 <p>Projects in the Hadoop ecosystem also tend to have names that are unrelated to their function, often with an elephant or other animal theme (&#x201C;Pig,&#x201D; for example). Smaller components are given more descriptive (and therefore more mundane) names. This is a good principle, as it means you can generally work out what something does from its name. For example, the namenode<sup><a href="#fn_1" id="reffn_1">1</a></sup> manages the filesystem namespace.</p>
 <hr>
 <p>Building a web search engine from scratch was an ambitious goal, for not only is the software required to crawl and index websites complex to write, but it is also a challenge to run without a dedicated operations team, since there are so many moving parts. It&#x2019;s expensive, too: Mike Cafarella and Doug Cutting estimated a system supporting a one-billion-page index would cost around $500,000 in hardware, with a monthly running cost of $30,000.<sup><a href="#fn_2" id="reffn_2">2</a></sup> Nevertheless, they believed it was a worthy goal, as it would open up and ultimately democratize search engine algorithms.</p>
-<p>Nutch was started in 2002, and a working crawler and search system quickly emerged. However, its creators realized that their architecture wouldn&#x2019;t scale to the billions of pages on the Web. Help was at hand with the publication of a paper in 2003 that described the architecture of Google&#x2019;s distributed filesystem, called GFS, which was being used in (P12)</p>
-<p><sup><a href="#fn_1" id="reffn_1">1</a></sup> In this book, we use the lowercase form, &#x201C;namenode,&#x201D; to denote the entity when it&#x2019;s being referred to generally, and the CamelCase form NameNode to denote the Java class that implements it.
-<sup><a href="#fn_2" id="reffn_2">2</a></sup> See Mike Cafarella and Doug Cutting, &#x201C;<strong>Building Nutch: Open Source Search</strong>,&#x201D; ACM Queue, April 2004.</p>
+<p>Nutch was started in 2002, and a working crawler and search system quickly emerged. However, its creators realized that their architecture wouldn&#x2019;t scale to the billions of pages on the Web. Help was at hand with the publication of a paper in 2003 that described the architecture of Google&#x2019;s distributed filesystem, called GFS, which was being used in production at Google.<sup><a href="#fn_10" id="reffn_10">10</a></sup> GFS, or something like it, would solve their storage needs for
+the very large files generated as a part of the web crawl and indexing process. In particular, GFS would free up time being spent on administrative tasks such as managing storage nodes. In 2004, Nutch&#x2019;s developers set about writing an open source implementation, the Nutch Distributed Filesystem (NDFS).</p>
+<p>In 2004, Google published the paper that introduced MapReduce to the world.<sup><a href="#fn_11" id="reffn_11">11</a></sup> Early in 2005, the Nutch developers had a working MapReduce implementation in Nutch, and by the middle of that year all the major Nutch algorithms had been ported to run using MapReduce and NDFS. 
+NDFS and the MapReduce implementation in Nutch were applicable beyond the realm of search, and in February 2006 they moved out of Nutch to form an independent subproject of Lucene called Hadoop. At around the same time, Doug Cutting joined Yahoo!, which provided a dedicated team and the resources to turn Hadoop into a system that ran at web scale (see the following sidebar). This was demonstrated in February 2008 when Yahoo! announced that its production search index was being generated by a 10,000-core Hadoop cluster.<sup><a href="#fn_5" id="reffn_5">5</a></sup></p>
+<hr>
+<h2 id="hadoop-at-yahoo">Hadoop at Yahoo!</h2>
+<p>Building Internet-scale search engines requires huge amounts of data and therefore large numbers of machines to process it. Yahoo! Search consists of four primary components: the Crawler, which downloads pages from web servers; the WebMap, which builds a graph of the known Web; the Indexer, which builds a reverse index to the best pages; and the Runtime, which answers users&#x2019; queries. The WebMap is a graph that consists of roughly 1 trillion (<script type="math/tex; ">10^12</script>) edges, each representing a web link, and 100 billion (<script type="math/tex; ">10^11</script>) nodes, each representing distinct URLs. Creating and analyzing such a large graph requires a large number of computers running for many days. In early 2005, the infrastructure for the WebMap, named Dreadnaught, needed to be redesigned to scale up to more nodes. Dreadnaught had successfully scaled from 20 to 600 nodes, but required a complete redesign to scale out further. Dreadnaught is similar to MapReduce in many ways, but provides more flexibility and less structure. In particular, each fragment in a Dreadnaught job could send output to each of the fragments in the next stage of the job, but the sort was all done in library code. In practice, most of the WebMap phases were pairs
+that corresponded to MapReduce. Therefore, the WebMap applications would not require extensive refactoring to fit into MapReduce.</p>
+<p>Eric Baldeschwieler (aka Eric14) created a small team, and we started designing and prototyping a new framework, written in C++ modeled and after GFS and MapReduce, to replace Dreadnaught. Although the immediate need was for a new framework for WebMap, it was clear that standardization of the batch platform across Yahoo! Search was critical and that by making the framework general enough to support other users, we could better leverage investment in the new platform.</p>
+<p>At the same time, we were watching Hadoop, which was part of Nutch, and its progress. In January 2006, Yahoo! hired Doug Cutting, and a month later we decided to abandon our prototype and adopt Hadoop. The advantage of Hadoop over our prototype and design was that it was already working with a real application (Nutch) on 20 nodes. That allowed us to bring up a research cluster two months later and start helping real customers use the new framework much sooner than we could have otherwise. Another advantage, of course, was that since Hadoop was already open source, it was easier
+(although far from easy!) to get permission from Yahoo!&#x2019;s legal department to work in open source. So, we set up a 200-node cluster for the researchers in early 2006 and put the WebMap conversion plans on hold while we supported and improved Hadoop for the research users.</p>
+<p>&#x2014;Owen O&#x2019;Malley, 2009</p>
+<hr>
+<p>In January 2008, Hadoop was made its own top-level project at Apache, confirming its success and its diverse, active community. By this time, Hadoop was being used by many other companies besides Yahoo!, such as Last.fm, Facebook, and the New York Times.</p>
+<p>In one well-publicized feat, the New York Times used Amazon&#x2019;s EC2 compute cloud to crunch through 4 terabytes of scanned archives from the paper, converting them to PDFs for the Web.<sup><a href="#fn_6" id="reffn_6">6</a></sup> The processing took less than 24 hours to run using 100 machines, and the project probably wouldn&#x2019;t have been embarked upon without the combination of Amazon&#x2019;s pay-by-the-hour model (which allowed the NYT to access a large number of machines for a short period) and Hadoop&#x2019;s easy-to-use parallel programming model.</p>
+<p>In April 2008, Hadoop broke a world record to become the fastest system to sort an entire terabyte of data. Running on a 910-node cluster, Hadoop sorted 1 terabyte in 209 seconds (just under 3.5 minutes), beating the previous year&#x2019;s winner of 297 seconds.<sup><a href="#fn_7" id="reffn_7">7</a></sup> In November of the same year, Google reported that its MapReduce implementation sorted 1 terabyte in 68 seconds.<sup><a href="#fn_8" id="reffn_8">8</a></sup> Then, in April 2009, it was announced that a team at Yahoo! had used Hadoop to sort 1 terabyte in 62 seconds.<sup><a href="#fn_9" id="reffn_9">9</a></sup></p>
+<p>The trend since then has been to sort even larger volumes of data at ever faster rates. In the 2014 competition, a team from Databricks were joint winners of the Gray Sort benchmark. They used a 207-node Spark cluster to sort 100 terabytes of data in 1,406 seconds, a rate of 4.27 terabytes per minute.<sup><a href="#fn_10" id="reffn_10">10</a></sup></p>
+<p>Today, Hadoop is widely used in mainstream enterprises. Hadoop&#x2019;s role as a general-purpose storage and analysis platform for big data has been recognized by the industry, and this fact is reflected in the number of products that use or incorporate Hadoop in some way. Commercial Hadoop support is available from large, established enterprise vendors, including EMC, IBM, Microsoft, and Oracle, as well as from specialist Hadoop companies such as Cloudera, Hortonworks, and MapR.</p>
+<blockquote id="fn_1">
+<sup>1</sup>. In this book, we use the lowercase form, &#x201C;namenode,&#x201D; to denote the entity when it&#x2019;s being referred to generally, and the CamelCase form NameNode to denote the Java class that implements it.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. See Mike Cafarella and Doug Cutting, &#x201C;<strong>Building Nutch: Open Source Search</strong>,&#x201D; ACM Queue, April 2004.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, &#x201C;<strong>The Google File System</strong>,&#x201D; October 2003.<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_4">
+<sup>4</sup>. Jeffrey Dean and Sanjay Ghemawat, &#x201C;<strong>MapReduce: Simplified Data Processing on Large Clusters</strong>,&#x201D; December 2004.<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_5">
+<sup>5</sup>. &#x201C;<strong>Yahoo! Launches World&#x2019;s Largest Hadoop Production Application</strong>,&#x201D; February 19, 2008.<a href="#reffn_5" title="Jump back to footnote [5] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_6">
+<sup>6</sup>. Derek Gottfrid, &#x201C;<strong>Self-Service, Prorated Super Computing Fun</strong>!&#x201D; November 1, 2007.<a href="#reffn_6" title="Jump back to footnote [6] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_7">
+<sup>7</sup>. Owen O&#x2019;Malley, &#x201C;<strong>TeraByte Sort on Apache Hadoop</strong>,&#x201D; May 2008<a href="#reffn_7" title="Jump back to footnote [7] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_8">
+<sup>8</sup>. Grzegorz Czajkowski, &#x201C;<strong>Sorting 1PB with MapReduce</strong>,&#x201D; November 21, 2008.<a href="#reffn_8" title="Jump back to footnote [8] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_9">
+<sup>9</sup>. Owen O&#x2019;Malley and Arun C. Murthy, &#x201C;<strong>Winning a 60 Second Dash with a Yellow Elephant</strong>,&#x201D; April 2009.<a href="#reffn_9" title="Jump back to footnote [9] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_10">
+<sup>10</sup>. Reynold Xin et al., &#x201C;<strong>GraySort on Apache Spark by Databricks</strong>,&#x201D; November 2014.<a href="#reffn_10" title="Jump back to footnote [10] in the text."> &#x21A9;</a>
+</blockquote>
 
                                 
                                 </section>
@@ -1904,7 +1963,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"A Brief History of Apache Hadoop","level":"1.2.1.6","depth":3,"next":{"title":"What's in This Book","level":"1.2.1.7","depth":3,"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md","ref":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md","articles":[]},"previous":{"title":"Volunteer Computing","level":"1.2.1.5.3","depth":4,"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/volunteer-computing.md","ref":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/volunteer-computing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md","mtime":"2018-03-23T09:48:52.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-23T09:49:06.118Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"A Brief History of Apache Hadoop","level":"1.2.1.6","depth":3,"next":{"title":"What's in This Book","level":"1.2.1.7","depth":3,"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md","ref":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/whats-in-this-book.md","articles":[]},"previous":{"title":"Volunteer Computing","level":"1.2.1.5.3","depth":4,"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/volunteer-computing.md","ref":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/comparison-with-other-systems/volunteer-computing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax","github","splitter","toggle-chapters"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"github":{"url":"https://github.com/fakeYanss"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageBreaksBefore":"/","toc":false,"paperSize":"a4","margin":{"right":40,"left":40,"top":36,"bottom":36},"font":"consolas","fontSize":15,"fontFamily":"Arial","chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hadoop-The Definitive Guide 4th","language":"en","links":{"sidebar":{"Home":"http://yanss.top"}},"gitbook":"*","description":"自读+部分单词翻译"},"file":{"path":"part-i-hadoop-fundamentals/chapter-1-meet-hadoop/a-brief-history-of-apache-hadoop.md","mtime":"2018-03-24T13:32:44.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T13:38:45.326Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1912,6 +1971,26 @@
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

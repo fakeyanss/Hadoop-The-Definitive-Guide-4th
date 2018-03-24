@@ -1,0 +1,40 @@
+{
+  "title": "Hadoop-The Definitive Guide 4th",
+  "description": "自读+部分单词翻译",
+  "language": "en",
+  "plugins": [
+      "mathjax",
+      "github",
+      "splitter",
+      "toggle-chapters"
+  ],
+  "pluginsConfig": {
+    "github": {
+        "url": "https://github.com/fakeYanss"
+    }
+  },
+  "links" : {
+    "sidebar" : {
+        "Home" : "http://yanss.top"
+    }
+  },
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  },
+  "pdf": {
+        "toc": false,
+        "pageNumbers": true,
+        "font": "consolas",
+        "fontSize": 15,
+        "paperSize": "a4",
+        "margin": {
+            "right": 40,
+            "left": 40,
+            "top": 36,
+            "bottom": 36
+        }
+    }
+}
