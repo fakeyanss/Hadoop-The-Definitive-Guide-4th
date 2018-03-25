@@ -1862,42 +1862,232 @@
                                 <h1 id="data-format">Data Format</h1>
 <p>The data we will use is from the National Climatic Data Center, or NCDC. The data is stored using a line-oriented ASCII format, in which each line is a record. The format supports a rich set of meteorological elements, many of which are optional or with variable data lengths. For simplicity, we focus on the basic elements, such as temperature, which are always present and are of fixed width.</p>
 <p>Example 2-1 shows a sample line with some of the salient fields annotated. The line has been split into multiple lines to show each field; in the real file, fields are packed into one line with no delimiters.</p>
-<p>Example 2-1. Format of a National Climatic Data Center record
-||||</p>
-<ul>
-<li>| - | -
-| 0057 |
-| 332130 | # | USAF weather station identifier |
-| 99999 | # | WBAN weather station identifier |
-| 19500101 | # | observation date |
-| 0300 | # | observation time |
-| 4 |
-| +51317 | # | latitude (degrees x 1000) |
-| +028783 | # | longitude (degrees x 1000) |
-| FM-12 | | |
-| 0171 | # | elevation (meters) |
-| 99999 | | |
-| V020 | | |
-| 320 | # | wind direction (degrees) |
-| 1 | # | quality code |
-| N | | |
-| 0072 | | |
-| 1 | | |
-| 00450 | # | sky ceiling height (meters) |
-| 1 | # | quality code |
-| C | | |
-| N | # | |
-| 010000 | # | visibility distance (meters) |
-| 1 | # | quality code |
-| N | | |
-| 9 | | |
-| -0128 | # | air temperature (degrees Celsius x 10) |
-| 1 | # | quality code |
-| -0139 | # | quality code |
-| 1 | # | dew point temperature (degrees Celsius x 10) |
-| 10268 | # | atmospheric pressure (hectopascals x 10) |
-| 1 | # | quality code |</li>
-</ul>
+<p>Example 2-1. Format of a National Climatic Data Center record</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>0057</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>332130</td>
+<td>#</td>
+<td>USAF weather station identifier</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>99999</td>
+<td>#</td>
+<td>WBAN weather station identifier</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>19500101</td>
+<td>#</td>
+<td>observation date</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>0300</td>
+<td>#</td>
+<td>observation time</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>+51317</td>
+<td>#</td>
+<td>latitude (degrees x 1000)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>+028783</td>
+<td>#</td>
+<td>longitude (degrees x 1000)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>FM-12</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>0171</td>
+<td>#</td>
+<td>elevation (meters)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>99999</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>V020</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>320</td>
+<td>#</td>
+<td>wind direction (degrees)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>#</td>
+<td>quality code</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>N</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>0072</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>00450</td>
+<td>#</td>
+<td>sky ceiling height (meters)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>#</td>
+<td>quality code</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>N</td>
+<td>#</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>010000</td>
+<td>#</td>
+<td>visibility distance (meters)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>#</td>
+<td>quality code</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>N</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>-0128</td>
+<td>#</td>
+<td>air temperature (degrees Celsius x 10)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>#</td>
+<td>quality code</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>-0139</td>
+<td>#</td>
+<td>quality code</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>#</td>
+<td>dew point temperature (degrees Celsius x 10)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>10268</td>
+<td>#</td>
+<td>atmospheric pressure (hectopascals x 10)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>#</td>
+<td>quality code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -1941,7 +2131,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Data Format","level":"1.2.2.1.1","depth":4,"next":{"title":"Analyzing the Data with Unix Tools","level":"1.2.2.2","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","articles":[]},"previous":{"title":"A Weather Dataset","level":"1.2.2.1","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","articles":[{"title":"Data Format","level":"1.2.2.1.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hadoop-The Definitive Guide 4th","links":{"sidebar":{"Home":"http://yanss.top"}},"gitbook":"*"},"file":{"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","mtime":"2018-03-25T14:39:50.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-25T14:40:02.911Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Data Format","level":"1.2.2.1.1","depth":4,"next":{"title":"Analyzing the Data with Unix Tools","level":"1.2.2.2","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/analyzing-the-data-with-unix-tools.md","articles":[]},"previous":{"title":"A Weather Dataset","level":"1.2.2.1","depth":3,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset.md","articles":[{"title":"Data Format","level":"1.2.2.1.1","depth":4,"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","ref":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hadoop-The Definitive Guide 4th","links":{"sidebar":{"Home":"http://yanss.top"}},"gitbook":"*"},"file":{"path":"part-i-hadoop-fundamentals/chapter-2-mapreduce/a-weather-dataset/data-format.md","mtime":"2018-03-25T14:41:29.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-25T14:41:42.036Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
