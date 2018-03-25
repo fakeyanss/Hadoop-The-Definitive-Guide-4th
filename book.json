@@ -3,16 +3,8 @@
   "description": "自读+部分单词翻译",
   "language": "en",
   "plugins": [
-      "mathjax",
-      "github",
-      "splitter",
-      "toggle-chapters"
+      "mathjax"
   ],
-  "pluginsConfig": {
-    "github": {
-        "url": "https://github.com/fakeYanss"
-    }
-  },
   "links" : {
     "sidebar" : {
         "Home" : "http://yanss.top"
