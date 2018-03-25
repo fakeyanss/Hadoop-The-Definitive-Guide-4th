@@ -5,12 +5,14 @@ The data we will use is from the National Climatic Data Center, or NCDC. The dat
 Example 2-1 shows a sample line with some of the salient fields annotated. The line has been split into multiple lines to show each field; in the real file, fields are packed into one line with no delimiters.
 
 Example 2-1. Format of a National Climatic Data Center record
-| 0057 |  |  |
+||||
+- | - | -
+| 0057 |
 | 332130 | # | USAF weather station identifier |
 | 99999 | # | WBAN weather station identifier |
 | 19500101 | # | observation date |
 | 0300 | # | observation time |
-| 4 | | |
+| 4 |
 | +51317 | # | latitude (degrees x 1000) |
 | +028783 | # | longitude (degrees x 1000) |
 | FM-12 | | |
