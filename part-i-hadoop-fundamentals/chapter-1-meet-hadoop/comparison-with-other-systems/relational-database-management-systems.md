@@ -2,7 +2,7 @@
 
 Why can’t we use databases with lots of disks to do large-scale analysis? Why is Hadoop needed?
 
-The answer to these questions comes from another trend in disk drives: seek timeq寻道时间 is improving more slowly than transfer rate. Seeking is the process of moving the disk’s head to a particular place on the disk to read or write data. It characterizes描述 the latency延迟 of a disk operation, whereas反之 the transfer rate corresponds符合 to a disk’s bandwidth.
+The answer to these questions comes from another trend in disk drives: seek timeq寻道时间 is improving more slowly than transfer rate. Seeking is the process of moving the disk’s head to a particular place on the disk to read or write data. It characterizes描述 the latency延迟 of a disk operation, whereas反之 the transfer rate corresponds符合 to a disk’s bandwidth带宽.
 
 If the data access pattern is dominated by seeks, it will take longer to read or write large portions of the dataset than streaming through it, which operates at the transfer rate. On the other hand, for updating a small proportion of records in a database, a traditional B-Tree \(the data structure used in relational databases, which is limited by the rate at which it can perform seeks\) works well. For updating the majority of a database, a B-Tree is less efficient than MapReduce, which uses Sort/Merge to rebuild the database.
 
