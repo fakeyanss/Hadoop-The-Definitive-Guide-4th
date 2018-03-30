@@ -1,4 +1,4 @@
-# 延迟Relational Database Management Systems
+# Relational Database Management Systems
 
 Why can’t we use databases with lots of disks to do large-scale analysis? Why is Hadoop needed?
 
