@@ -1,2 +1,0 @@
-# Capacity Scheduler Configuration
-

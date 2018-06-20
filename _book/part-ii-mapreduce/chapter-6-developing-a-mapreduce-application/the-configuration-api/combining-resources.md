@@ -1,2 +1,0 @@
-# Combining Resources
-

@@ -1,2 +1,0 @@
-# Parallel Copying with distcp
-

@@ -1,2 +1,0 @@
-# THe Design of HDFS
-

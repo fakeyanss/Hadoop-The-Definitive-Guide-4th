@@ -4,7 +4,7 @@ The approach taken by MapReduce may seem like a brute-force蛮力的 approach. T
 
 For example, Mailtrust, Rackspace’s mail division部门, used Hadoop for processing email logs. One ad hoc query they wrote was to find the geographic distribution of their users. In their words:
 
-> This data was so useful that we’ve scheduled the MapReduce job to run monthly and we will be using this data to help us decide which Rackspace托管服务 data centers to place new mail servers in as we grow.
+> This data was so useful that we’ve scheduled the MapReduce job to run monthly and we will be using this data to help us decide which Rackspace data centers to place new mail servers in as we grow.
 
-By bringing several hundred gigabytes of data together and having the tools to analyze it, the Rackspace engineers were able to gain an understanding of the data that they otherwise在其他方面 would never have had, and furthermore, they were able to use what they had learned to improve the service for their customers.
+By bringing several hundred gigabytes of data together and having the tools to analyze it, the Rackspace engineers were able to gain an understanding of the data that they otherwise would never have had, and furthermore, they were able to use what they had learned to improve the service for their customers.
 

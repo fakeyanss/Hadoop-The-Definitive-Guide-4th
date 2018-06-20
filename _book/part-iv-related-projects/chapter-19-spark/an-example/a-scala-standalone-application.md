@@ -1,2 +1,0 @@
-# A Scala Standalong Application
-
