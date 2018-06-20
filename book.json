@@ -1,17 +1,14 @@
 {
   "title": "Hadoop-The Definitive Guide 4th",
-  "plugins": ["katex","anchor-navigation-ex","disqus"],
+  "plugins": ["katex","disqus"],
   "links" : {
     "sidebar" : {
         "Home" : "http://yanss.top"
     }
   },
   "pluginsConfig": {
-        "anchor-navigation-ex": {
-            "showLevel": false
-        },
         "disqus": {
-            "shortName": "Comment"
+            "shortName": "yanss"
         }
     }
 }
