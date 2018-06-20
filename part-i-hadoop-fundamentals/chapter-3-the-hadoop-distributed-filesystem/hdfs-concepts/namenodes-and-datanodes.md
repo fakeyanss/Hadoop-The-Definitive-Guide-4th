@@ -1,2 +1,0 @@
-# Namenodes and Datanodes
-

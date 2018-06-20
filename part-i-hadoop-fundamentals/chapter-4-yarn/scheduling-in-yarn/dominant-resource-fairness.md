@@ -1,2 +1,0 @@
-# Dominant Resource Fairness
-

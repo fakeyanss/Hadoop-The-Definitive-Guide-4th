@@ -1,2 +1,0 @@
-# The MapReduce Web UI
-

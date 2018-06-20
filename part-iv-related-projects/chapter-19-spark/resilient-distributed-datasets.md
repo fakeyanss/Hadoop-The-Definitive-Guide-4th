@@ -1,2 +1,0 @@
-# Resilient Distributed Datasets
-
